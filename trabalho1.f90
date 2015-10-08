@@ -1,8 +1,9 @@
 PROGRAM trabalho1 !Inicio do trabalho de clp em fortran
-	IMPLICIT NONE !Todas as variáveis terão que ter seus tipos definidos IMPLICITAMENTE
+	IMPLICIT NONE !Todas as variáveis terão que ter seus tipos definidos EXPLICITAMENTE
 	!Declaração de variáveis
-	CHARACTER *10 first !Primeira linha-> equivalente a first[10]
-	CHARACTER *1000 second !Segunda linha-> equivalente a second[1000]
+	CHARACTER, POINTER :: base1,base2,pont1,pont2 !Ponteiros que serão responsáveis pela manipulação das strings
+	CHARACTER(LEN=10), TARGET :: first !Primeira linha-> equivalente a first[10]
+	CHARACTER(LEN=1000), TARGET :: second !Segunda linha-> equivalente a second[1000]
 	!Abertura de arquivo
 	OPEN(UNIT=50,FILE="entrada.txt") !Leitura de arquivo, demais atributos não são obrigados (status, action)
 	!leitura do arquivo
