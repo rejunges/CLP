@@ -1,7 +1,7 @@
 PROGRAM trabalho1 !Inicio do trabalho de clp em fortran
 
 IMPLICIT NONE !Todas as variáveis terão que ter seus tipos definidos EXPLICITAMENTE
-INTEGER, EXTERNAL :: substringc ! Variável externa para tratar strings vindas do c
+INTEGER, EXTERNAL :: substringc
 !Declaração de variáveis
 CHARACTER *10 first !Primeira linha-> equivalente a first[10]
 CHARACTER *1000 second !Segunda linha-> equivalente a second[1000]
