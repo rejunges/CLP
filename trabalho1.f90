@@ -31,7 +31,7 @@ CONTAINS
 			!Para não comparar inutilmente os ultimos chars da string2, descontamos o tamanho da string1		
 			DO WHILE(aux <= LEN_TRIM(second)-LEN_TRIM(first)+1) 
 				!Compara por posições como se fossem posições de um vetor.
-				IF(first(inicio:LEN_TRIM(first)) == second(aux:LEN_TRIM(first) + aux - 1)) then	
+				IF(first(inicio:LEN_TRIM(first)) == second(aux:LEN_TRIM(first) + aux - 1)) THEN
 					 cont=1+cont
 				END IF
 				aux = aux + 1
