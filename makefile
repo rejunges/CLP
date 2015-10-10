@@ -1,5 +1,5 @@
 to_compile_and_link:
-	gcc -c main.c		#gera .o
-	gcc -o main.exe main.o	#linka .o's
+	gcc -c trabalho1.c			#gera .o
+	gcc -o trabalho1.exe trabalho1.o	#linka .o's
 to_run:
-	./main			#run the output
+	./trabalho1				#run the output
