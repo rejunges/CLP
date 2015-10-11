@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int numeroVezes(char *pont1,char *pont2){
+int numeroVezesC(char *pont1,char *pont2){
 	char *base1, *base2;
 	int cont=0;
 	base1 = pont1;

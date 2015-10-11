@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 //o número de vezes que a primeira string é encontrada na segunda
-extern int substring(char* s, int* length, char* subs, int* lengths); //estrutura pra pegar a string em java
-int numeroVezes(char *pont1,char *pont2);
+int numeroVezesC(char *pont1,char *pont2);
 	
 int main(void) {
 	FILE *arquivo; // estrutura para usar arquivo
@@ -16,13 +15,13 @@ int main(void) {
 	pont1=fgets(linha1, 12, arquivo);  // esse fgets lê a primeira linha
 	pont2=fgets(linha2, 1002, arquivo);  // esse fgets lê a segunda linha
 	fclose(arquivo); //fecha o programa
-	cont = numeroVezes(pont1, pont2); //Chama a função que verifica o número de vezes 
+	cont = numeroVezesC(pont1, pont2); //Chama a função que verifica o número de vezes 
 	printf ("%d", cont);
 	return 0;
 
 }
 
-int numeroVezes(char *pont1,char *pont2){
+int numeroVezesC(char *pont1,char *pont2){
 	char *base1, *base2;
 	int cont=0;
 	base1 = pont1;

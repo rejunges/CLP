@@ -1,8 +1,6 @@
 PROGRAM trabalho1 !Inicio do trabalho de clp em fortran
 
 IMPLICIT NONE !Todas as variáveis terão que ter seus tipos definidos EXPLICITAMENTE
-INTEGER, EXTERNAL :: substringc ! Variável externa para tratar strings vindas do c
-!Declaração de variáveis
 CHARACTER *10 first !Primeira linha-> equivalente a first[10]
 CHARACTER *1000 second !Segunda linha-> equivalente a second[1000]
 INTEGER cont
@@ -15,11 +13,11 @@ READ(50, *) first  !Le a primeira linha do arquivo
 READ(50,*) second !Le a segunda liha do arquivo
 CLOSE(50) !Fecha o arquivo
 
-CALL numeroVezes(first, second, cont)
+CALL numeroVezesFortran(first, second, cont)
 print *, cont !Informa o numero de vezes que a string1 está na string2
 
 CONTAINS
-	SUBROUTINE numeroVezes(first,second,cont) !Parametros passados
+	SUBROUTINE numeroVezesFortran(first,second,cont) !Parametros passados
 			IMPLICIT NONE
 			CHARACTER *10, INTENT(IN) :: first !Não altera o valor de first
 			CHARACTER *1000, INTENT (IN) :: second !Não altera o valor de second
@@ -36,5 +34,5 @@ CONTAINS
 				END IF
 				aux = aux + 1
 			END DO
-		END SUBROUTINE numeroVezes
+		END SUBROUTINE numeroVezesFortran
 END PROGRAM trabalho1

@@ -14,7 +14,7 @@ int main(void) {
 	pont1=fgets(linha1, 12, arquivo);  // esse fgets lê a primeira linha
 	pont2=fgets(linha2, 1002, arquivo);  // esse fgets lê a segunda linha
 	fclose(arquivo); //fecha o programa
-	cont = numeroVezes(pont1, pont2); //Chama a função que verifica o número de vezes 
+	cont = numeroVezesC(pont1, pont2); //Chama a função que verifica o número de vezes 
 	printf ("%d", cont);
 	while(getchar() != '\n');
 	return 0;
