@@ -1,5 +1,5 @@
 #include <string.h>
 #include <stdio.h>
 #include "biblioteca.c"
-int numeroVezesC(char *pont1,char *pont2);
+int numeroVezesC(char *linha1,char *linha2, int tam1, int tam2)
 
